@@ -6,23 +6,23 @@ echo "🔍 Running cross-package lint..."
 # Python
 echo "→ Linting cad-automation..."
 cd packages/cad-automation
-ruff check src/ || true
-ruff format --check src/ || true
-mypy src/ || true
+ruff check src/
+ruff format --check src/
+mypy src/
 cd ../..
 
 echo "→ Linting ai-agents..."
 cd packages/ai-agents
-ruff check agents/ || true
-ruff format --check agents/ || true
-mypy agents/ || true
+ruff check agents/
+ruff format --check agents/
+mypy agents/
 cd ../..
 
 # TypeScript
 echo "→ Linting web-dashboard..."
 cd packages/web-dashboard
-npm run lint || true
-npm run type-check || true
+npm run lint
+npm run type-check
 cd ../..
 
 echo ""
